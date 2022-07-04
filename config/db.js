@@ -8,7 +8,11 @@ const mongoClient = async () => {
 
   try {
     await mongoose
-      .connect(conStr)
+      .connect(conStr, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+      })
       .then((con) => console.log(`MongoDb connected : ${con.connection.host}`))
       .catch((err) => console.log(err));
   } catch (error) {
