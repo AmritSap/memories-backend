@@ -1,0 +1,45 @@
+// ******************************* USER RELATED STUFF ******************************* //
+
+### REGISTER/CREATE USER
+POST http://localhost:5000/api/v1/user/register
+Content-Type: application/json
+
+{
+  "name": "James Maddison",
+  "email": "jm@w.com",
+  "password": "anuppoudel90",
+  "avatar":"public_url"
+}
+
+
+### LOGIN 
+POST http://localhost:5000/api/v1/user/login
+Content-Type: application/json
+
+{
+  "email": "jm@w.com",
+  "password": "anuppoudel90"
+}
+
+
+### LOGOUT
+GET http://localhost:5000/api/v1/user/logout
+
+
+### GET USER PROFILE / LOAD USER ON PAGE RELOAD
+GET http://localhost:5000/api/v1/user/profile
+
+
+// ******************************* POST RELATED STUFF ******************************* //
+
+### REGISTER/CREATE USER
+POST http://localhost:5000/api/v1/post
+Content-Type: application/json
+
+{
+  "title" : "My first post",
+  "desc":"Hey I just created my first post, hope you like it"
+}
+
+### GET ALL POST
+GET http://localhost:5000/api/v1/post/all
