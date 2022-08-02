@@ -1,12 +1,15 @@
 // ******************************* USER RELATED STUFF ******************************* //
 
+// username: jm@w.com pw: anuppoudel90
+// username: dm@w.com pw: anuppoudel90
+
 ### REGISTER/CREATE USER
 POST http://localhost:5000/api/v1/user/register
 Content-Type: application/json
 
 {
-  "name": "James Maddison",
-  "email": "jm@w.com",
+  "name": "Danny Welbeck",
+  "email": "dm@w.com",
   "password": "anuppoudel90",
   "avatar":"public_url"
 }
@@ -17,7 +20,7 @@ POST http://localhost:5000/api/v1/user/login
 Content-Type: application/json
 
 {
-  "email": "jm@w.com",
+  "email": "dm@w.com",
   "password": "anuppoudel90"
 }
 
@@ -43,3 +46,16 @@ Content-Type: application/json
 
 ### GET ALL POST
 GET http://localhost:5000/api/v1/post/all
+
+
+### DELETE POST
+DELETE  http://localhost:5000/api/v1/post/62e8e83964dc6e1794ca9433
+
+### UPDATE POST
+PUT http://localhost:5000/api/v1/post/62e8e83964dc6e1794ca9433
+Content-Type: application/json
+
+{
+  "title" : "My first post",
+  "desc":"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
+}
