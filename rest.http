@@ -1,0 +1,85 @@
+// ******************************* USER RELATED STUFF ******************************* //
+
+// username: jm@w.com pw: anuppoudel90
+// username: dm@w.com pw: anuppoudel90
+
+### REGISTER/CREATE USER
+POST http://localhost:5000/api/v1/user/register
+Content-Type: application/json
+
+{
+  "name": "Danny Welbeck",
+  "email": "dm@w.com",
+  "password": "anuppoudel90",
+  "avatar":"public_url"
+}
+
+
+### LOGIN 
+POST http://localhost:5000/api/v1/user/login
+Content-Type: application/json
+
+{
+  "email": "jm@w.com",
+  "password": "newPassword"
+}
+
+
+### LOGOUT
+GET http://localhost:5000/api/v1/user/logout
+
+
+### GET USER PROFILE / LOAD USER ON PAGE RELOAD
+GET http://localhost:5000/api/v1/user/profile
+
+
+### DELETE USER PORIFLE
+DELETE http://localhost:5000/api/v1/user/delete
+
+### UPDATE USER PORIFLE
+PUT http://localhost:5000/api/v1/user/update/profile
+Content-Type: application/json
+
+{
+  "name": "James",
+  "email": "jm@w.com"
+}
+
+### UPDATE USER PASSWORD
+PUT http://localhost:5000/api/v1/user/update/password
+Content-Type: application/json
+
+{
+  "oldPassword": "anuppoudel90",
+  "newPassword": "newPassword"
+}
+
+
+
+
+// ******************************* POST RELATED STUFF ******************************* //
+
+### REGISTER/CREATE USER
+POST http://localhost:5000/api/v1/post
+Content-Type: application/json
+
+{
+  "title" : "My first post",
+  "desc":"Hey I just created my first post, hope you like it"
+}
+
+### GET ALL POST
+GET http://localhost:5000/api/v1/post/all
+
+
+### DELETE POST
+DELETE  http://localhost:5000/api/v1/post/62e8e83964dc6e1794ca9433
+
+### UPDATE POST
+PUT http://localhost:5000/api/v1/post/62e8e83964dc6e1794ca9433
+Content-Type: application/json
+
+{
+  "title" : "My first post",
+  "desc":"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
+}
